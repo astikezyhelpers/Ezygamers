@@ -8,7 +8,7 @@
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
@@ -51,7 +51,7 @@
 			<div class="header-bar-warp d-flex">
 				<!-- site logo -->
 				<a href="index.html" class="site-logo">
-					<img src="{% static './img/logo.png'%}" alt="" style="height: 50px;">
+					<img src="{% static './img/logo.png' %}" alt="" style="height: 50px;">
 				</a>
 				<nav class="top-nav-area w-100">
 					<!-- <div class="user-panel">
@@ -66,7 +66,7 @@
 							</ul>
 						</li>
 						<li><a href="review.html">Reviews</a></li> -->
-						<li><a href="api/blog">News</a></li>
+						<li><a href="">News</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
@@ -77,7 +77,7 @@
 
 
 	<!-- Page top section -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/3.jpg">
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/3.jpg'%}">
 		<div class="page-info">
 			<h2>Blog</h2>
 			<div class="site-breadcrumb">
@@ -94,12 +94,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-9 col-lg-8 col-md-7">
-					<ul class="blog-filter">
+					<!-- <ul class="blog-filter">
 						<li><a href="#">Racing</a></li>
 						<li><a href="#">Shooters</a></li>
 						<li><a href="#">Strategy</a></li>
 						<li><a href="#">Online</a></li>
-					</ul>
+					</ul> -->
                     {% for post in posts %}
 					<div class="big-blog-item">
 						<img src="{% static 'img/blog-big/1.jpg' %}" alt="#" class="blog-thumbnail">
@@ -108,7 +108,7 @@
 							<h3 class="card-title">{{ post.title }}</h3>
 							<p class="card-text">{{ post.content|truncatewords:20 }}</p>
                             <p class="text-muted">By {{ post.author }}</p>
-							<a href="#" class="read-more">Read More <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
+							<a href="{% url 'blog_detail' post.pk %}" class="read-more">Read More <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
 						</div>
 					</div>
                     {% endfor %}
@@ -219,11 +219,11 @@
 								</div>
 							</div> -->
 						</div>
-						<div class="widget-item">
+						<!-- <div class="widget-item">
 							<a href="#" class="add">
-								<img src="./img/add.jpg" alt="">
+								<img src="{% static './img/add.jpg' %}" alt="">
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -238,7 +238,7 @@
 			<h2>Subscribe to our newsletter</h2>
 			<form class="newsletter-form">
 				<input type="text" placeholder="ENTER YOUR E-MAIL">
-				<button class="site-btn">subscribe <img src="img/icons/double-arrow.png" alt="#"/></button>
+				<button class="site-btn">subscribe <img src="{% static 'img/icons/double-arrow.png' %}" alt="#"/></button>
 			</form>
 		</div>
 	</section>
@@ -249,19 +249,19 @@
 	<footer class="footer-section">
 		<div class="container">
 			<div class="footer-left-pic">
-				<img src="img/footer-left-pic.png" alt="">
+				<img src="{% static 'img/footer-left-pic.png' %}" alt="">
 			</div>
 			<div class="footer-right-pic">
-				<img src="img/footer-right-pic.png" alt="">
+				<img src="{% static 'img/footer-right-pic.png' %}" alt="">
 			</div>
 			<a href="#" class="footer-logo">
-				<img src="./img/logo.png" alt="">
+				<img src="{% static './img/logo.png' %}" alt="">
 			</a>
 			<ul class="main-menu footer-menu">
 				<li><a href="">Home</a></li>
-				<li><a href="">Games</a></li>
-				<li><a href="">Reviews</a></li>
-				<li><a href="">News</a></li>
+				<!-- <li><a href="">Games</a></li>
+				<li><a href="">Reviews</a></li> -->
+				<li><a href="">Blog</a></li>
 				<li><a href="">Contact</a></li>
 			</ul>
 			<div class="footer-social d-flex justify-content-center">
@@ -271,7 +271,7 @@
 				<a href="#"><i class="fa fa-dribbble"></i></a>
 				<a href="#"><i class="fa fa-behance"></i></a>
 			</div>
-			<div class="copyright"><a href="">Colorlib</a> 2018 @ All rights reserved</div>
+			<div class="copyright"><a href="">Ezygamers</a> 2024 @ All rights reserved</div>
 		</div>
 	</footer>
 	<!-- Footer section end -->

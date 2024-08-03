@@ -42,9 +42,9 @@
 	<div class="header-warp">
 		<div class="header-social d-flex justify-content-end">
 			<p>Follow us:</p>
-			<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a> 
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
 		</div>
 		<div class="header-bar-warp d-flex">
 			<!-- site logo -->
@@ -58,7 +58,7 @@
 				<!-- Menu -->
 				<ul class="main-menu primary-menu">
 					<li><a href="{% url 'home' %}">Home</a></li>
-					<li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
 						<!-- <li><a href="games.html">Games</a>
 							<ul class="sub-menu">
 								<li><a href="game-single.html">Game Singel</a></li>
@@ -78,11 +78,11 @@
 	<!-- Page top section -->
 	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg'%}">
 		<div class="page-info">
-			<h2>Games</h2>
-			<div class="site-breadcrumb">
+			<h2 class="gs-title">About Ezygamers</h2>
+			<!-- <div class="site-breadcrumb">
 				<a href="">Home</a>  /
 				<span>Blog</span>
-			</div>
+			</div> -->
 		</div>
 	</section>
 	<!-- Page top end-->
@@ -96,16 +96,26 @@
 			</div>
 			<div class="row">
 				<div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
-					<div class="gs-meta">{{ post.created_at }} /  in <a href="">Blog</a></div>
-					<h2 class="gs-title">{{ post.title }}</h2>
-					<!-- <h4>Gameplay</h4> -->
-					<p> {{ post.content }}</p>
-					<!-- <h4>Conclusion</h4> -->
-					<div class="geme-social-share pt-5 d-flex">
+					
+					<h4>Mission Statement:</h4>
+					<p>At Ezy Gamers Studio, our mission is to uplift rural India by enhancing educational opportunities through mobile games. We begin with a focus on female students and later expand to include male students. Our aim is to create mobile-based games that facilitate English learning, provide career guidance, and ultimately help students gain meaningful employment, fostering a brighter future for all.</p>
+					
+                    <br>
+                    <h4>Initial Focus on Female Students:</h4>
+					<p>We believe that empowering young girls is the key to transforming communities. Our initial focus is on improving literacy among female students in rural areas. By providing increased educational opportunities, we help these students grow and reach their full potential, paving the way for a more equitable and prosperous society.</p>
+					<br>
+                    <h4>Game-Based Solutions:</h4>
+					<p>Our innovative approach leverages the power of interactive games to assist children in learning English effectively. We collaborate with different NGOs to reach rural students across India. In the future, we plan to integrate various games that provide career guidance, helping children understand different career options, improve their English-speaking skills, and address other prevalent issues. Our ultimate goal is to equip them with the skills and knowledge needed to secure employment and build successful careers.</p>
+					<br>
+                    <h4>Our Vision:</h4>
+					<p>At Ezy Gamers Studio, we envision a world where every child, regardless of their background, has access to quality education and the tools they need to succeed. By combining the excitement of gaming with educational content, we aim to make learning enjoyable and impactful. Our mission extends beyond education, as we strive to help students transition into the workforce, ensuring they have the opportunities they need to achieve their dreams. Together, we are gaming for a brighter tomorrow.</p>
+                    <div class="geme-social-share pt-5 d-flex">
 						<p>Share:</p>
-						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
 						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-behance"></i></a>
 					</div>
 				</div>
 				<!-- <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">
@@ -141,15 +151,15 @@
 	</section>
 	<!-- Games end-->
 
-	<section class="game-author-section">
+	<!-- <section class="game-author-section">
 		<div class="container">
 			<div class="game-author-pic set-bg" data-setbg="{% static 'img/author.jpg'%}"></div>
 			<div class="game-author-info">
 				<h4>Written by: {{ post.author }}</h4>
-				<!-- <p>Vivamus volutpat nibh ac sollicitudin imperdiet. Donec scelerisque lorem sodales odio ultricies, nec rhoncus ex lobortis. Vivamus tincid-unt sit amet sem id varius. Donec elementum aliquet tortor. Curabitur justo mi, efficitur sed eros alique.</p> -->
+				<p>Vivamus volutpat nibh ac sollicitudin imperdiet. Donec scelerisque lorem sodales odio ultricies, nec rhoncus ex lobortis. Vivamus tincid-unt sit amet sem id varius. Donec elementum aliquet tortor. Curabitur justo mi, efficitur sed eros alique.</p>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 <!-- Newsletter section -->
 <section class="newsletter-section">
@@ -178,7 +188,7 @@
 		</a>
 		<ul class="main-menu footer-menu">
 			<li><a href="{% url 'home' %}">Home</a></li>
-			<li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
 						<!-- <li><a href="games.html">Games</a>
 							<ul class="sub-menu">
 								<li><a href="game-single.html">Game Singel</a></li>

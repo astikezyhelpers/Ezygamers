@@ -49,8 +49,12 @@ def home_view(request):
 
 
 def home1_view(request):
+    posts = BlogPost.objects.all()
+    return render(request, 'blog/index.html', {'posts': posts})
+
+def about_view(request):
     # posts = BlogPost.objects.all()
-    return render(request, 'blog/index.html')
+    return render(request, 'blog/about.html')
 
 
 def contact_view(request):

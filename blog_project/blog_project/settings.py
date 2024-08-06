@@ -103,7 +103,7 @@ DATABASES = {
         'NAME': 'ezygamers',
         'USER': 'admin',
         'PASSWORD': '123456',
-        'HOST': 'localhost',  # Or the hostname where your PostgreSQL server is running
+        'HOST': '192.168.1.15',  # Or the hostname where your PostgreSQL server is running
         'PORT': '5432',  # Or the port your PostgreSQL server is running on
     }
 }

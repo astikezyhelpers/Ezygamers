@@ -110,7 +110,7 @@
 						<div class="top-meta">{{ post.created_at }} /  in <a href="">Blog</a></div>
 						<h3>{{ post.title|slice:":22" }}</h3>
 						<p>{{ post.content|truncatewords:49 }}</p>
-						<a href="#" class="read-more">Read More  <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
+						<a href="{% url 'blog_detail' post.pk %}" class="read-more">Read More  <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
 					</div>
 				</div>
 				{% endfor %}
@@ -144,7 +144,7 @@
 							<div class="top-meta">{{ post.created_at }}  /  in <a href="">Blog</a></div>
 							<h3>{{ post.title }}</h3>
 							<p>{{ post.content|truncatewords:50 }}</p>
-							<a href="#" class="read-more">Read More  <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
+							<a href="{% url 'blog_detail' post.pk %}" class="read-more">Read More  <img src="{% static 'img/icons/double-arrow.png'%}" alt="#"/></a>
 						</div>
 					</div>
 					{% endfor %}
@@ -248,7 +248,7 @@
 
 
 	<!-- Newsletter section -->
-	<section class="newsletter-section">
+	<!-- <section class="newsletter-section">
 		<div class="container">
 			<h2>Subscribe to our newsletter</h2>
 			<form class="newsletter-form">
@@ -256,7 +256,7 @@
 				<button class="site-btn">subscribe <img src="{% static 'img/icons/double-arrow.png' %}" alt="#"/></button>
 			</form>
 		</div>
-	</section>
+	</section> -->
 	<!-- Newsletter section end -->
 
 
